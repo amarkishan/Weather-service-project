@@ -1,0 +1,17 @@
+<div *ngIf="posts && posts.length>0 else noPosts">
+    
+    <h4>Employer details</h4>
+    <ul>
+
+    <pre *ngFor="let post of posts">
+        <p>{{post.title}}</p>
+        
+    </pre>
+    </ul>
+
+</div>
+
+<ng-template #noPosts>
+    <h4>No posts available </h4>
+</ng-template>
+
